@@ -4,10 +4,12 @@ public class Category {
 
     private String mCategoryName;
     private int mCategoryId;
+    private int mImageResourceId;
 
-    public Category(String mCategoryName, int mCategoryId) {
-        this.mCategoryName = mCategoryName;
-        this.mCategoryId = mCategoryId;
+    public Category(String categoryName, int categoryId, int imageResourceId) {
+        this.mCategoryName = categoryName;
+        this.mCategoryId = categoryId;
+        this.mImageResourceId = imageResourceId;
     }
 
     public String getmCategoryName() {
@@ -16,5 +18,9 @@ public class Category {
 
     public int getmCategoryId() {
         return mCategoryId;
+    }
+
+    public int getmImageResourceId() {
+        return mImageResourceId;
     }
 }
