@@ -3,6 +3,8 @@ package com.example.triviacategorylister;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -41,5 +43,9 @@ public class MainActivity extends AppCompatActivity {
         categories.add("Animals");
         categories.add("Vehicles");
 
+        ArrayAdapter<String> categoriesAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, categories);
+
+        ListView listView = (ListView) findViewById(R.id.categories_list);
+        listView.setAdapter(categoriesAdapter);
     }
 }
